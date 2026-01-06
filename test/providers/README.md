@@ -12,16 +12,23 @@ Tests for Kiro CLI integration (`kiro_cli`)
 
 Since Kiro CLI has identical output format to Q CLI, the test fixtures are reused with renamed files.
 
+### Copilot CLI Provider
+Tests for GitHub Copilot CLI integration (`copilot_cli`)
+
+Since Copilot CLI has an identical output format to Q CLI and Kiro CLI, the test structure mirrors these providers.
+
 ## Test Structure
 
 ```
 test/providers/
 ├── test_q_cli_unit.py          # Q CLI unit tests (fast, mocked)
 ├── test_kiro_cli_unit.py       # Kiro CLI unit tests (fast, mocked)
+├── test_copilot_cli_unit.py    # Copilot CLI unit tests (fast, mocked)
 ├── test_q_cli_integration.py   # Q CLI integration tests (slow, real Q CLI)
 ├── fixtures/                    # Test fixture files
 │   ├── q_cli_*.txt             # Q CLI fixtures
 │   ├── kiro_cli_*.txt          # Kiro CLI fixtures (identical format to Q CLI)
+│   ├── copilot_cli_*.txt       # Copilot CLI fixtures (identical format to Q CLI)
 │   └── generate_fixtures.py    # Script to regenerate fixtures
 └── README.md
 ```
@@ -342,6 +349,23 @@ uv run pytest test/providers/test_kiro_cli_unit.py::TestKiroCliProviderStatusDet
 
 Note: Kiro CLI has identical output format to Q CLI, so the test structure and fixtures mirror the Q CLI tests.
 
+## Copilot CLI Provider Tests
+
+### Running Copilot CLI Tests
+
+```bash
+# Run all Copilot CLI unit tests
+uv run pytest test/providers/test_copilot_cli_unit.py -v
+
+# Run with coverage
+uv run pytest test/providers/test_copilot_cli_unit.py --cov=src/cli_agent_orchestrator/providers/copilot_cli.py --cov-report=term-missing -v
+
+# Run specific test class
+uv run pytest test/providers/test_copilot_cli_unit.py::TestCopilotCliProviderStatusDetection -v
+```
+
+Note: Copilot CLI has identical output format to Q CLI and Kiro CLI, so the test structure and fixtures mirror these providers.
+
 ### Key Test Validations
 
 1. **Index Integrity**: Verifies ANSI codes don't corrupt position-based extraction
@@ -352,8 +376,8 @@ Note: Kiro CLI has identical output format to Q CLI, so the test structure and f
 
 ## Test Quality Metrics
 
-- **Unit Test Count:** 42
+- **Unit Test Count:** 42 Q CLI + 41 Kiro CLI + 41 Copilot CLI = 124 total
 - **Integration Test Count:** 9
-- **Coverage:** 100% of q_cli.py
+- **Coverage:** 100% of q_cli.py, kiro_cli.py, and copilot_cli.py
 - **Execution Time:** <1s (unit), <90s (integration)
 - **Test Categories:** 7 (initialization, status, extraction, patterns, prompts, handoff, edge cases)
