@@ -1,0 +1,21 @@
+$ gemini-cli chat --agent developer
+[38;5;10m> [39mHere's a complex response that includes multiple sections.
+
+## Section 1: Introduction
+This demonstrates a longer response with various formatting elements.
+
+## Section 2: Technical Details
+- Point 1: Important detail
+- Point 2: Another key point
+- Point 3: Final consideration
+
+## Code Example
+```python
+def example():
+    return "Hello from Gemini CLI"
+```
+
+## Conclusion
+This shows how the provider handles multi-line responses.
+
+[36m[developer][35m>[39m 
