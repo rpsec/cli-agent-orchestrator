@@ -16,8 +16,6 @@ GREEN_ARROW_PATTERN = r"^>\s*"  # Pattern for ANSI-cleaned output (start of line
 ANSI_CODE_PATTERN = r"\x1b\[[0-9;]*m"
 ESCAPE_SEQUENCE_PATTERN = r"\[[?0-9;]*[a-zA-Z]"
 CONTROL_CHAR_PATTERN = r"[\x00-\x1f\x7f-\x9f]"
-BELL_CHAR = "\x07"
-GENERIC_PROMPT_PATTERN = r"\x1b\[38;5;13m>\s*\x1b\[39m\s*$"
 IDLE_PROMPT_PATTERN_LOG = r"\x1b\[38;5;13m>\s*\x1b\[39m"
 
 # Error indicators
