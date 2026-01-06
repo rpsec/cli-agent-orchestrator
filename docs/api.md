@@ -23,7 +23,7 @@ Check if the server is running.
 Create a new session with one terminal.
 
 **Parameters:**
-- `provider` (string, required): Provider type ("q_cli" or "claude_code")
+- `provider` (string, required): Provider type ("q_cli", "kiro_cli", "gemini_cli", or "claude_code")
 - `agent_profile` (string, required): Agent profile name
 - `session_name` (string, optional): Custom session name
 
@@ -77,7 +77,7 @@ Get terminal details.
 {
   "id": "string",
   "name": "string",
-  "provider": "q_cli|claude_code",
+  "provider": "q_cli|kiro_cli|gemini_cli|claude_code",
   "session_name": "string",
   "agent_profile": "string",
   "status": "idle|processing|completed|waiting_user_answer|error",
