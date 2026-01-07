@@ -1,0 +1,2 @@
+$ copilot --agent developer
+Allow this action? [y/n/t]: [36m[developer][35m>[39m 

@@ -86,6 +86,9 @@ cao install developer --provider kiro_cli
 # Install for Gemini CLI
 cao install developer --provider gemini_cli
 
+# Install for Copilot CLI
+cao install developer --provider copilot_cli
+
 # Install for Amazon Q CLI (default)
 cao install developer --provider q_cli
 ```
@@ -111,6 +114,8 @@ cao launch --agents code_supervisor
 cao launch --agents code_supervisor --provider kiro_cli
 # Or use gemini_cli
 cao launch --agents code_supervisor --provider gemini_cli
+# Or use copilot_cli
+cao launch --agents code_supervisor --provider copilot_cli
 ```
 
 Shutdown sessions:
@@ -268,7 +273,7 @@ A flow that runs at regular intervals with a static prompt (no script needed):
 name: daily-standup
 schedule: "0 9 * * 1-5"  # 9am weekdays
 agent_profile: developer
-provider: q_cli  # Optional, defaults to q_cli. Options: q_cli, kiro_cli, gemini_cli, claude_code
+provider: q_cli  # Optional, defaults to q_cli. Options: q_cli, kiro_cli, gemini_cli, copilot_cli, claude_code
 ---
 
 Review yesterday's commits and create a standup summary.

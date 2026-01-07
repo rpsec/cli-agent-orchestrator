@@ -1,0 +1,17 @@
+$ copilot --agent developer
+[38;5;10m> [39mPython Example:
+```python
+def hello_world():
+    print("Hello, World!")
+```
+
+JavaScript Example:
+```javascript
+function helloWorld() {
+    console.log("Hello, World!");
+}
+```
+
+Both examples demonstrate basic function syntax in their respective languages.
+
+[36m[developer][35m>[39m 

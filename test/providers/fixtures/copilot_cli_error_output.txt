@@ -1,0 +1,3 @@
+$ copilot --agent developer
+Copilot is having trouble responding right now
+[36m[developer][35m>[39m 

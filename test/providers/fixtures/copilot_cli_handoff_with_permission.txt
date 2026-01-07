@@ -1,0 +1,5 @@
+$ copilot --agent supervisor
+What task would you like to delegate?
+[38;5;10m> [39mI'll delegate this task but need your permission first.
+
+Allow this action? [y/n/t]: [36m[supervisor][35m>[39m 

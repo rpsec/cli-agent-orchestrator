@@ -1,0 +1,6 @@
+$ copilot --agent supervisor
+What task would you like to delegate?
+[38;5;10m> [39mI'll try to handoff this task but an error occurred.
+
+Copilot is having trouble responding right now
+[36m[supervisor][35m>[39m 

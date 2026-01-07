@@ -7,6 +7,7 @@ from cli_agent_orchestrator.clients.database import get_terminal_metadata
 from cli_agent_orchestrator.models.provider import ProviderType
 from cli_agent_orchestrator.providers.base import BaseProvider
 from cli_agent_orchestrator.providers.claude_code import ClaudeCodeProvider
+from cli_agent_orchestrator.providers.copilot_cli import CopilotCliProvider
 from cli_agent_orchestrator.providers.gemini_cli import GeminiCliProvider
 from cli_agent_orchestrator.providers.kiro_cli import KiroCliProvider
 from cli_agent_orchestrator.providers.q_cli import QCliProvider
@@ -43,6 +44,10 @@ class ProviderManager:
                 if not agent_profile:
                     raise ValueError("Gemini CLI provider requires agent_profile parameter")
                 provider = GeminiCliProvider(terminal_id, tmux_session, tmux_window, agent_profile)
+            elif provider_type == ProviderType.COPILOT_CLI.value:
+                if not agent_profile:
+                    raise ValueError("Copilot CLI provider requires agent_profile parameter")
+                provider = CopilotCliProvider(terminal_id, tmux_session, tmux_window, agent_profile)
             elif provider_type == ProviderType.CLAUDE_CODE.value:
                 provider = ClaudeCodeProvider(terminal_id, tmux_session, tmux_window, agent_profile)
             else:

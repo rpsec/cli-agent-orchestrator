@@ -75,6 +75,8 @@ src/cli_agent_orchestrator/
 │   ├── manager.py         # Maps terminal_id → provider
 │   ├── q_cli.py           # Amazon Q CLI provider (q_cli)
 │   ├── kiro_cli.py        # Kiro CLI provider (kiro_cli)
+│   ├── gemini_cli.py      # Gemini CLI provider (gemini_cli)
+│   ├── copilot_cli.py     # Copilot CLI provider (copilot_cli)
 │   └── claude_code.py     # Claude Code provider (claude_code)
 ├── models/                # Data models
 │   ├── terminal.py        # Terminal, TerminalStatus
